@@ -5,6 +5,7 @@ node 'test1' {
 node 'front' {
   include packages
   include web_server
+  include php
 }
 
 node 'base' {
