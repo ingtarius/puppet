@@ -17,3 +17,8 @@ node 'base1' {
   include default_conf
   include postgress_database
 }
+
+node 'app' {
+   include default_conf
+   include app_node
+}

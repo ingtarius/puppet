@@ -8,6 +8,7 @@ class default_conf {
   package { 'cronie-noanacron':   ensure => 'installed' }
   package { 'crontabs':   ensure => 'installed' }
   package { 'rsync':   ensure => 'installed' }
+  package { 'tcpdump':   ensure => 'installed' }
 
  cron { 'puppet_update':   
   	command => "puppet agent --test",   
