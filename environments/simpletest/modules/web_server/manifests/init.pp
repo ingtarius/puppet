@@ -16,4 +16,14 @@ class web_server {
       source => "puppet:///modules/web_server/wordpress.conf",
    }
 
+   file { "/etc/nginx/nginx.conf":
+      notify => Service['nginx'],
+      mode => "0644",
+      owner => "root",
+      group => "root",
+      require => Package['nginx'],
+      source => "puppet:///modules/web_server/default.conf",
+   }
+
+
 }
